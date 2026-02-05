@@ -1,9 +1,12 @@
+from typing import Dict,List
 from pathlib import Path
 
 
-AGE_CLASS = [18, 25, 32, 39, 46, 53, 60]
+AGE_CLASS: List[int] = [18, 25, 32, 39, 46, 53, 60]
 
-CITY_CLASS = {
+BATCH_SIZE: int = 256
+
+CITY_CLASS: Dict = {
     'Московская-область': 0,
     'г-Москва': 0,
     'Ленинградская-область': 1,
@@ -25,9 +28,9 @@ CITY_CLASS = {
     'Прочие-города': 3
 }
 
-CSV_PATH = Path('cv_100000.csv')
+CSV_PATH: Path = Path('cv_100000.csv')
 
-DROP = [
+DROP: List[str] = [
     'id', 'candidateId', 'stateRegionCode', 'locality',
     'birthday', 'gender', 'dateCreate', 'dateModify',
     'publishedDate', 'academicDegree', 'worldskills',
@@ -40,7 +43,9 @@ DROP = [
     'languageKnowledge', 'relocation', 'innerInfo'
 ]
 
-EMPLOYMENT_CLASS = {
+EPOCHS: int = 100
+
+EMPLOYMENT_CLASS: Dict = {
     'Стажировка': 0,
     'Временная': 1,
     'Сезонная': 2,
@@ -49,11 +54,11 @@ EMPLOYMENT_CLASS = {
     'Полная-занятость': 5
 }
 
-EXPERIENCE_CLASS = [1, 3, 5, 7, 10, 15]
+EXPERIENCE_CLASS: List[int] = [1, 3, 5, 7, 10, 15]
 
-FILTERS = '!"«»#$№%&()*+,-–—./:;<=>?@[\\]^_`{|}~\t\n\xa0'
+FILTERS: str = '!"«»#$№%&()*+,-–—./:;<=>?@[\\]^_`{|}~\t\n\xa0'
 
-SCHEDULE_CLASS = {
+SCHEDULE_CLASS: Dict = {
     'Сменный-график': 0,
     'Ненормированный-рабочий-день': 1,
     'Вахтовый-метод': 2,
@@ -62,6 +67,6 @@ SCHEDULE_CLASS = {
     'Полный-рабочий-день': 5,
 }
 
-NUM_WORDS = 3000
+NUM_WORDS: int = 3000
 
 URL: str = 'https://storage.yandexcloud.net/academy.ai/cv_100000.csv'
