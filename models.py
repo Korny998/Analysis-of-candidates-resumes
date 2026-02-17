@@ -47,7 +47,10 @@ def build_simplified_assembly_model(
     tabular_dim: int,
     position_dim: int
 ):
-    """Build a simplified Keras model with multiple inputs for salary regression."""
+    """
+    Build a simplified Keras model
+    with multiple inputs for salary regression.
+    """
     input1 = Input(shape=(tabular_dim,), name='tabular_input')
     input2 = Input(shape=(position_dim,), name='position_input')
 
@@ -70,5 +73,5 @@ def build_simplified_assembly_model(
         outputs=x,
         name='simplified_salary_regression_model'
     )
-    
+
     return model

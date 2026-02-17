@@ -1,12 +1,12 @@
-from typing import Dict,List
+from typing import Dict, List, Tuple
 from pathlib import Path
 
 
-AGE_CLASS: List[int] = [18, 25, 32, 39, 46, 53, 60]
+AGE_CLASS: Tuple[int, ...] = (18, 25, 32, 39, 46, 53, 60)
 
 BATCH_SIZE: int = 256
 
-CITY_CLASS: Dict = {
+CITY_CLASS: Dict[str, int] = {
     'Московская-область': 0,
     'г-Москва': 0,
     'Ленинградская-область': 1,
@@ -45,7 +45,7 @@ DROP: List[str] = [
 
 EPOCHS: int = 100
 
-EMPLOYMENT_CLASS: Dict = {
+EMPLOYMENT_CLASS: Dict[str, int] = {
     'Стажировка': 0,
     'Временная': 1,
     'Сезонная': 2,
@@ -54,11 +54,11 @@ EMPLOYMENT_CLASS: Dict = {
     'Полная-занятость': 5
 }
 
-EXPERIENCE_CLASS: List[int] = [1, 3, 5, 7, 10, 15]
+EXPERIENCE_CLASS: Tuple[int, ...] = (1, 3, 5, 7, 10, 15)
 
 FILTERS: str = '!"«»#$№%&()*+,-–—./:;<=>?@[\\]^_`{|}~\t\n\xa0'
 
-SCHEDULE_CLASS: Dict = {
+SCHEDULE_CLASS: Dict[str, int] = {
     'Сменный-график': 0,
     'Ненормированный-рабочий-день': 1,
     'Вахтовый-метод': 2,

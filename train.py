@@ -17,6 +17,10 @@ from models import (
 
 
 def train_model():
+    """
+    Build, compile, and train the
+    full multi-input salary regression model.
+    """
     model = build_assembly_model(
         tabular_dim=x_train.shape[1],
         education_dim=x_train_education.shape[1],
@@ -29,7 +33,7 @@ def train_model():
         loss=MeanSquaredError(),
         metrics=['mae']
     )
- 
+
     history = model.fit(
         x=[
             x_train[:8000],
@@ -52,10 +56,12 @@ def train_model():
 
 
 def train_simplified_model():
+    """
+    Build, compile, and train a
+    simplified multi-inputsalary regression model.
+    """
     model = build_simplified_assembly_model(
         tabular_dim=x_train.shape[1],
-        education_dim=x_train_education.shape[1],
-        works_dim=x_train_works.shape[1],
         position_dim=x_train_position.shape[1]
     )
 
