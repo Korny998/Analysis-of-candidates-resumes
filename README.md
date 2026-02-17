@@ -136,20 +136,20 @@ NUM_WORDS = 3000
 *1. Full Multi-Input Model*
 
 - Layers:
-    - Branch 1 – Tabular Features: Input → Dense(20) → Dense(500) → Dense(200)
-    - Branch 2 – Education Text: Input → Dense(20) → Dense(200) → Dropout(0.3)
-    - Branch 3 – Work Experience Text: Input → Dense(20) → Dense(200) → Dropout(0.3)
-    - Branch 4 – Position Title: Input → Dense(20) → Dense(200) → Dropout(0.3)
-    - Fusion Layer: Concatenate → Dense(30) → Dropout(0.5) → Dense(1)
-    - Output: 1 neuron -> 1 neuron -> Linear activation
+    1. Branch 1 – Tabular Features: Input → Dense(20) → Dense(500) → Dense(200)
+    2. Branch 2 – Education Text: Input → Dense(20) → Dense(200) → Dropout(0.3)
+    3. Branch 3 – Work Experience Text: Input → Dense(20) → Dense(200) → Dropout(0.3)
+    4.  Branch 4 – Position Title: Input → Dense(20) → Dense(200) → Dropout(0.3)
+    5. Fusion Layer: Concatenate → Dense(30) → Dropout(0.5) → Dense(1)
+    6. Output: 1 neuron -> 1 neuron -> Linear activation
 
 *2. Simplified Model*
 
 Gated Recurrent Units with stronger temporal modeling.
 
 - Layers:
-    - (Tabular branch + Position branch)
-    - Concatenate
-    - Dense(30)
-    - Dropout(0.5)
-    - Dense(1)
+    1. (Tabular branch + Position branch)
+    2. Concatenate
+    3. Dense(30)
+    4. Dropout(0.5)
+    5. Dense(1)
